@@ -14,6 +14,7 @@
 //     </div>
 //   );
 // };
+
 import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile.js';
 import user from './Profile/user.json';
