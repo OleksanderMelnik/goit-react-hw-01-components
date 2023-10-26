@@ -1,11 +1,14 @@
 
-import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile.js';
-import user from './Profile/user.json';
+import user from './json/user.json';
 import { Statistics } from './Statistics/Statistics.js';
-import data from './Statistics/data.json';
+import data from './json/data.json';
+import friends from './json/friends.json';
+import { FriendList } from './FriendList/FriendList.js';
+import transactions from './json/transactions.json';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory.js'
 
-export function App () {
+export const App = () => {
   return (
     <div>
       <Profile 
@@ -16,7 +19,8 @@ export function App () {
       stats = {user.stats}
       />
       <Statistics title="Upload stats" stats= {data} />
-      
+      <FriendList friends={friends} />;
+      <TransactionHistory items={transactions} />;
     </div>    
   );
 };
