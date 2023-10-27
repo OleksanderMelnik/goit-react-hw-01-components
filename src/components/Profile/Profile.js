@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
 
+import { ProfileContainer, Description, Name, Tag, Location, Avatar, Stats, Item, Label, Quantity } from './Profile.styled';
+
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-      <div className="profile">
-        <div className="description">
-          <p className="name">{username}</p>
-          <p className="tag">@{tag}</p>
-          <p className="location">{location}</p>
-          <img className="avatar" src={avatar} alt={username} width="120" height="120" />
-
-        </div>
-        <ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{stats.followers}</span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="quantity">{stats.views}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{stats.likes}</span>
-          </li>
-        </ul>
-      </div>
+      <ProfileContainer>
+        <Description>
+          <Avatar src={avatar} alt={username} />
+          <Name>{username}</Name>
+          <Tag>@{tag}</Tag>
+          <Location>{location}</Location>
+        </Description>
+        <Stats>
+          <Item>
+            <Label>Followers</Label>
+            <Quantity>{stats.followers}</Quantity>
+          </Item>
+          <Item>
+            <Label>Views</Label>
+            <Quantity>{stats.views}</Quantity>
+          </Item>
+          <Item>
+            <Label>Likes</Label>
+            <Quantity>{stats.likes}</Quantity>
+          </Item>
+        </Stats>
+      </ProfileContainer>
     );
   };
 
@@ -33,11 +34,10 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.arrayOf(
-      PropTypes.shape({
+    stats: PropTypes.shape({
         followers: PropTypes.number.isRequired,
         views: PropTypes.number.isRequired,
         likes: PropTypes.number.isRequired,
       }).isRequired
-    ).isRequired,
+    
   }
