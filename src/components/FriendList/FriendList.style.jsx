@@ -13,7 +13,8 @@ export const Item = styled.li`
     margin-right: auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);`
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);`
 
 export const Status = styled.span`
     width: 15px;

@@ -4,15 +4,17 @@ export const ProfileContainer = styled.div`
     width: 340px;
     margin: 0 auto;
     padding: 70px 50px;
-    background-color: darkgrey;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);
+    
+    
     `
 
 export const Description = styled.div`
     width: 280px;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: #E7E9FC;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);`
@@ -35,20 +37,18 @@ export const Location = styled.p`
 export const Avatar = styled.img`
     width: 100px;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
     border-radius: 50%;`
 
 export const Stats = styled.ul`
-    width: 302px;
     height: 100px;
-    background-color: gainsboro;
+    background-color: #F3F3F3;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    padding: 0;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    list-style-type: none;`
+    border-bottom-right-radius: 10px;`
 
 export const Item = styled.li`
     display: flex;

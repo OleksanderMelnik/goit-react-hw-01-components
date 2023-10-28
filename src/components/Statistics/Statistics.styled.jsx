@@ -10,16 +10,16 @@ export const StatisticsSection = styled.section`
     margin-right: auto;
     width: 302px;
     padding: 60px 60px;
-    background-color: blanchedalmond;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);`
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);`
 
 export const Title = styled.h2`
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    background-color: white;
+    background-color: #E7E9FC;
     font-weight: 700;
     border-radius: 10px;`
 
