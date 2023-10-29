@@ -6,12 +6,12 @@ export const Statistics = ({title, stats}) => {
     
     return (
       <StatisticsSection>
-        <Title>{title}</Title>
+        {title && <Title>{title}</Title>}
         <StatList>
         {stats.map(el => (
           <StatItem key={el.id} style={{ backgroundColor: generateColor()}}>
           <Label>{el.label}</Label> 
-          <Percentage>{el.percentage}</Percentage>
+          <Percentage>{el.percentage}%</Percentage>
           </StatItem>
         ))}
         </StatList>
